@@ -3,4 +3,10 @@
     <string name="title">Hello, Serato</string>
     <string name="name">Name</string>
     <string name="enter_name">Enter name</string>
+    <string name="main_button">Change!</string>
+    <string-array name="user_type">
+        <item name="admin">Admin</item>
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
 </resources>
