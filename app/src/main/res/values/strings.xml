@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BackgroundSerato</string>
+    <string name="title">Hello, Serato</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name</string>
+</resources>
