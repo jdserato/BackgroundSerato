@@ -31,8 +31,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         myButtonListenerMethod();
         daynightToggleListenerMethod();
+        userTypeChangeListenerMethod(this);
         ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.clMain);
         bgElement.setBackgroundColor(Color.RED);
+    }
+
+    public void userTypeChangeListenerMethod(Context c) {
+        Spinner spUserType = (Spinner) findViewById(R.id.spUsertype);
+        spUserType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected = (String) spUserType.getItemAtPosition(i);
+                Toast.makeText(c, "You have selected " + selected, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     public void daynightToggleListenerMethod() {
