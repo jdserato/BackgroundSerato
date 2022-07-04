@@ -32,8 +32,31 @@ public class MainActivity extends AppCompatActivity {
         myButtonListenerMethod();
         daynightToggleListenerMethod();
         userTypeChangeListenerMethod(this);
+        edittextListenerMethod();
         ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.clMain);
         bgElement.setBackgroundColor(Color.RED);
+    }
+
+    public void edittextListenerMethod() {
+        EditText etName = (EditText) findViewById(R.id.etName);
+        etName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//                System.out.println("Before: " + charSequence);
+                Log.d("vince", "Before: " + charSequence);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//                System.out.println("After: " + charSequence);
+                Log.d("vince", "After: " + charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
     public void userTypeChangeListenerMethod(Context c) {
